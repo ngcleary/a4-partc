@@ -1,0 +1,95 @@
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body{
+    font-family: "Montserrat", serif;
+    background-color: #799461;
+}
+
+.families {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+.back {
+    font-size: 16px;
+    text-align: center;
+    padding: 0px;
+
+    width: 150px;
+    height: 30px;
+  
+    /*These lines position the back button inside the header*/
+    position: absolute;
+    top: 8px;
+    border-radius: 3px;
+  }
+button{
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 3px;
+    width: 500px;
+    height: 90px;
+  }
+
+  button:hover{
+    background-color: lightgray;
+  }
+
+button:active{
+    background-color: gray;
+}
+
+#disabled:hover{
+    background-color: orangered;
+  }
+
+#disabled:active{
+    background-color: orangered;
+}
+  header.secondary {
+    text-align: center;
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px;
+
+  }
+
+  header {
+    font-size: 35px;
+    padding: 10px;
+    min-height: 50px; /*for footer*/
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#header {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+  }
+img{
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+h1{
+    margin-left: 180px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 40px;
+}

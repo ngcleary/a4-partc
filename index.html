@@ -1,104 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="/main.css" />
 
-    <link rel="stylesheet" href="/css/main.css" defer>
-    
     <title>CS43041 Part C</title>
-    <meta 
-    name="description"
-    content= "Family tree">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
+    <meta name="description" content="Family tree" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- get rid of favicon error -->
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
   </head>
-  
   <body>
-    <script src="/js/main.js" defer></script>
-    <div class="header">
-      
-    Memory Tree</div>
-    <!-- <div class="instructions">
-      <h5>
-        Enter the item you are bringing or suggest an item for others to bring. 
-      </h5>
-      <h5>
-        Other user's price and cost are hidden.
-      </h5>
-    </div> -->
-      <div class="cloumn1">
-        <form class="formsubmit">
-          <input type="text" id="youritem" maxlength="10" value="" placeholder="Enter Item">
-          <input type="number" min= "0" step="1" maxlength="10" oninput="validity.valid||(value='');" id="numItems" value="" placeholder="Enter Quanitity"> <!--only allow whole, positive numbers-->
-          <input type="number" min="0" maxlength="10" id="itemPrice" value="" placeholder="Enter Item Price">
-          <button id="submit" class="btn btn-warning">submit</button>
-        </form>
-      </div>
+    <div class="families">
+      <button onclick="window.location.href = '/home';">User</button>
+      <button onclick="password()">Caretaker</button>
     </div>
-    <div>
-      <form>
-        <input type="text" id="suggestItem" maxlength="10" value="" placeholder="Enter Item">
-        <input type="number" min= "0" step="1" maxlength="10" oninput="validity.valid||(value='');" id="suggestQty" value="" placeholder="Enter Quanitity"> <!--only allow whole, positive numbers-->
-        <button type="button" class="btn btn-warning" id="suggest">suggest</button>
-      </form>
-    </div>
-    <section class="guests" aria-label="Guest List">
-      <button class="toggleguestlist" role="switch" aria-label="listToggle" aria-checked="false" tabindex="0" id="guestToggle">
-          <div class="toggle-circle"></div>
-      </button>
-      <label for="guestToggle">double click to Hide/show guest list</label>
-  </section>
     
-    <!--Start of Flex-->
-    </div>
-    <div class="flex-container">
-      <!-- Table to display fetched user data -->
-      <div class="column">
-        <h2>Who's Bringing What:</h2>
-        <table id="table">
-          <tr>
-            <th>Name</th>
-            <th>Item</th>
-            <th>Quanitity</th>
-            <th>Total Cost</th>
-            <th>Delete an Item</th>
-          </tr>
-        </table>
-      </div>
-      <!--Guest List-->
-      <div class="column" id="names">
-        <h2 id="number">Who's Coming:</h2>
-        <ol id="guestList" class="list-group list-group-numbered">
-          <li></li>
-        </ol>
-        
-      </div>
-      <div class="column">
-        <h2>Suggestions:</h2>
-        <table id="tableSuggest">
-          <tr>
-            <th>Item</th>
-            <th>Quanitity</th>
-            <th>Bring This Item</th>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <form >
-      <div>
-      <input type="text" id="enterId" value="" placeholder="Enter Item to edit"> <!--only allow whole, positive numbers-->
-      </div>
-      <div>
-        <input type="text" id="newitem" maxlength="10" value="" placeholder="Enter Edit">
-      </div>
-        <div>
-          <button id="edit" class="btn btn-warning">Edit</button>
-        </div>
-    </form>
- 
+    <div id="pass"></div>
   </body>
+  <script>
+    function password() {
+      let text;
+      let person = prompt("Please enter password:", "password");
+      if (person == null || person == "") {
+        text = "User cancelled the prompt.";
+      } else if(person != "hello") {
+        text = "Incorrect password.";
+      }
+      else{
+        window.location.href = '/nora'
+      }
+      document.getElementById("pass").innerHTML = text;
+
+    }
+  </script>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 
-    <link rel="stylesheet" href="/css/main.css" defer>
+    <link rel="stylesheet" href="/main.css" defer>
     
     <title>CS43041 Part C</title>
     <meta 
@@ -18,8 +18,16 @@
   </head>
 
   <body>
-    <h1>Choose a Family</h1>
-    <button id="cleary" onclick="window.location.href = '/cleary';">Cleary</button>
+    <button class="back" onclick="location.href='/';">Back to Login</button>
+    
+    <header class="secondary">Choose a Family</header>
+    <div class="families">
+      <button id="disabled" disabled>Perkins</button>
+      <button id="disabled"disabled>Vittelli</button>
+      <button id="cleary" onclick="window.location.href = '/cleary';">Cleary</button>
+      <button id="disabled" disabled>Thompson</button>
+      <button  onclick="window.location.href = '/bigTree';">View all families</button>
+    </div>
 
    
       

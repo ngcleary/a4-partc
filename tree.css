@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-body {
-  font-family: "Montserrat", serif;
-  background-color: olive;
+body{
+    font-family: "Montserrat", serif;
+    background-color: #799461;
 }
 button {
-  color: red;
   display: inline-block;
   height: 100px;
   width: 200px;
@@ -14,11 +13,50 @@ button {
   font-weight: bold;
   font-family: "Montserrat", serif;
 }
+.back {
+  font-size: 16px;
+  text-align: center;
+  padding: 0px;
 
-div{
-  display: flex;
+  width: 150px;
+  height: 30px;
+
+  /*These lines position the back button inside the header*/
+  position: absolute;
+  top: 8px;
+  border-radius: 3px;
 }
 
+button:hover{
+  background-color: lightgray;
+}
+
+button:active{
+  background-color: gray;
+}
+#disabled:hover{
+  background-color: orangered;
+}
+
+#disabled:active{
+  background-color: orangered;
+}
+/* .cell{
+  display: flex;
+} */
+
+#header {
+  display: flex;
+  text-align: center;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+}
+h1{
+  font-size: 50px;
+}
 img{
   display: inline-block;
   height: 50px;
@@ -26,7 +64,6 @@ img{
   border-radius: 10px;
 }
 .orgchart-row {
-  background-color: rebeccapurple; /* Example background color */
   border: 1px solid #ccc; /* Example border */
 }
 
@@ -39,8 +76,8 @@ img{
 }
 
 .orgchart-cell {
-
-  padding: 50px; /* Example padding */
+  align-items: center;
+  justify-content: center;
 }
 
 .orgchart-cell-hover {

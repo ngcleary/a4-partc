@@ -9,6 +9,12 @@ const server = http.createServer( function( request,response ) {
       break
     case '/index.html':
       sendFile( response, 'index.html' )
+      
+    case '/nora':
+      sendFile( response, 'nora.html' )
+      break
+    case '/bigTree':
+      sendFile( response, 'bigTree.html' )
       break
     case '/tree.css':
       sendFile( response, 'tree.css' )

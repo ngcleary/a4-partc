@@ -21,18 +21,53 @@
         data.addRows([
           [
             {
-              v: "Kimberley and Peter",
-              f: `<div style= "display: flex;">
-      <button style= "margin-right:10px;"><img src="/emptyProfile.png"><br/>Kimberley</button>
-      <button style= "margin-left:10px;"><img src="/emptyProfile.png"><br/>Peter</button></div>`,
+              v: "Carol and Jack",
+              f: `
+      <button style="padding: 5px;"><img src="/emptyProfile.png"><br/>Carol</button>
+      <button ><img src="/emptyProfile.png"><br/>Jack</button>`,
             },
             "",
             "",
           ],
           [
             {
+              v: "Amy",
+              f: '<button><img src="/emptyProfile.png"><br/>Amy</button>',
+            },
+            "Carol and Jack",
+            "",
+          ],
+          [
+            {
+              v: "Jennifer",
+              f: '<button><img src="/emptyProfile.png"><br/>Jennifer</button>',
+            },
+            "Carol and Jack",
+            "",
+          ],
+          [
+            {
+              v: "Kimberley and Peter",
+              f: `<button style= "height: 50px;"onclick="window.location.href = '/cleary';"><br/>Cleary family</button><div class="cell">
+                
+      <button ><img src="/emptyProfile.png"><br/>Kimberley</button>
+      <button><img src="/emptyProfile.png"><br/>Peter</button></div>`,
+            },
+            "Carol and Jack",
+            "",
+          ],
+          [
+            {
+              v: "Melissa",
+              f: '<button style="color:blue;"><img src="/emptyProfile.png"><br/>Melissa</button>',
+            },
+            "Carol and Jack",
+            "",
+          ],
+          [
+            {
               v: "Madelyn",
-              f: '<button><img src="/emptyProfile.png"><br/>Madelyn</button>',
+              f: `<button disabled><img src="/emptyProfile.png"><br/>Madelyn</button>`,
             },
             "Kimberley and Peter",
             "",
@@ -40,7 +75,7 @@
           [
             {
               v: "Maeve",
-              f: '<button><img src="/emptyProfile.png"><br/>Maeve</button>',
+              f: `<button disabled><img src="/emptyProfile.png"><br/>Maeve</button>`,
             },
             "Kimberley and Peter",
             "",
@@ -51,22 +86,6 @@
               f: `<button onclick="noraProfile()"><img src="/emptyProfile.png"><br/>Nora</button>`,
             },
             "Kimberley and Peter",
-            "",
-          ],
-          [
-            {
-              v: "Sarah",
-              f: '<button style="color:blue;"><img src="/emptyProfile.png"><br/>Sarah</button>',
-            },
-            "Nora",
-            "",
-          ],
-          [
-            {
-              v: "Joe",
-              f: `<button id='disabled' disabled style="color:blue;"><img src="/emptyProfile.png"><br/>Joe</button>`,
-            },
-            "Maeve",
             "",
           ],
         ]);
@@ -87,18 +106,24 @@
           document.getElementById("chart_div")
         );
         // Draw the chart, setting the allowHtml option to true for the tooltips.
-        chart.draw(data, { 'allowHtml': true });
+        chart.draw(data, {
+          'allowHtml': true,
+          'compactRows': true,
+          'size': "small"
+        });
       }
 
-      function noraProfile(){
-        window.location.href = '/nora';
+      function noraProfile() {
+        window.location.href = "/nora";
       }
     </script>
   </head>
   <body>
     <div id="header">
-      <button class="back" onclick="location.href='/home';">Back to families</button>
-      <h1>Cleary Family</h1>
+      <button class="back" onclick="location.href='/home';">
+        Back to families
+      </button>
+      <h1>My Family</h1>
     </div>
     <div id="chart_div"></div>
     <div id="test"></div>
