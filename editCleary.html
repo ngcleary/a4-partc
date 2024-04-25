@@ -22,8 +22,8 @@
             {
               v: "Kimberley and Peter",
               f: `<div style= "display: flex;">
-      <button style= "margin-right:10px;"><img src="/emptyProfile.png"><br/>Kimberley<img style="height: 25px; width: 25px;" src="edit.png"></button>
-      <button style= "margin-left:10px;"><img src="/emptyProfile.png"><br/>Peter<img style="height: 25px; width: 25px;" src="edit.png"></button></div>`,
+      <button id="disabled" disabled style= "margin-right:10px;"><img src="/emptyProfile.png"><br/>Kimberley<img style="height: 25px; width: 25px;" src="edit.png"></button>
+      <button id="disabled" disabled style= "margin-left:10px;"><img src="/emptyProfile.png"><br/>Peter<img style="height: 25px; width: 25px;" src="edit.png"></button></div>`,
             },
             "",
             "",
@@ -31,7 +31,7 @@
           [
             {
               v: "Madelyn",
-              f: '<button><img src="/emptyProfile.png"><br/>Madelyn<img style="height: 25px; width: 25px;" src="edit.png"></button>',
+              f: '<button id="disabled" disabled><img src="/emptyProfile.png"><br/>Madelyn<img style="height: 25px; width: 25px;" src="edit.png"></button>',
             },
             "Kimberley and Peter",
             "",
@@ -39,7 +39,7 @@
           [
             {
               v: "Maeve",
-              f: '<button><img src="/emptyProfile.png"><br/>Maeve<img style="height: 25px; width: 25px;" src="edit.png"></button>',
+              f: `<button id='disabled' disabled><img src="/emptyProfile.png"><br/>Maeve<img style="height: 25px; width: 25px;" src="edit.png"></button>`,
             },
             "Kimberley and Peter",
             "",
@@ -71,7 +71,11 @@
           document.getElementById("chart_div")
         );
         // Draw the chart, setting the allowHtml option to true for the tooltips.
-        chart.draw(data, { 'allowHtml': true });
+        chart.draw(data, {
+          'allowHtml': true,
+          'compactRows': true,
+          'size': "small"
+        });
       }
 
       function noraEditProfile(){

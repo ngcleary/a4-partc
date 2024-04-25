@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <div id="header">
+        <button class="back" onclick="alertNoSave()">Back to Home</button>
+        <h1 id="nameTitle"></h1>
+      </div>
+    <div>
+        <img src="emptyProfile.png">
+        <!-- <h3>Nora Cleary <br><br>Parents: Kimberley and Peter <br><br>Siblings: Madelyn and Maeve <br><br> Birthday: March 16, 2004 <br><br> Age: 20</h3> -->
+        <form method="post" id="register">
+            <div>
+              <label for="name">First Name: </label>
+              <input type="text" name="name" id="firstName" value="Nora" />
+              <label for="name">Last Name: (Optional) </label>
+              <input type="text" name="name" id="name" value="Cleary" />
+            </div>
+    
+            <div>
+              <label for="parent1">Parent 1: </label>
+              <input type="text" name="parent1" id="parent1" value="Kimberley" />
+              <label for="parent2">Parent 2: </label>
+              <input type="text" name="parent2" id="parent2" value="Peter" />
+            </div>
+            <label for="dob">Date of Birth: </label>
+    
+            <input type="date" name="dob" id="dob" Value="03/16/2004" />
+            <form>
+              <label for="description"
+                >Upload an event description (Optional) </label
+              >
+              <textarea id="description" rows="6" cols="50"></textarea>
+            </form>
+            <br />
+          </form>  
+          
+    </div>
+    <button onclick="refresh()" style="font-size: 20px; width: 100%; height: 50px; background-color: #77a8ac">Save Changes</button>
+  </body>
+  <script>
+    function alertNoSave() {
+        alert("This feauture is still under development. Any changes you made will not be saved");
+        window.location.href = "/editHome";
+    
+    }
+    function isEmpty(str) {
+      return !str || str.length === 0;
+    }
+    function refresh(){
+        document.getElementById("nameTitle").innerHTML = document.getElementById('firstName').value;
+        
+    }
+      
+   
+        window.onload = function(){
+            refresh();
+        };
+    
+    
+  </script>
+</html>

@@ -49,6 +49,12 @@ const server = http.createServer( function( request,response ) {
     case '/edit.png':
       sendFile( response, 'edit.png' )
       break
+    case '/noraEdit':
+      sendFile( response, 'noraEdit.html' )
+      break
+    case '/interrogation.png':
+      sendFile( response, 'interrogation.png' )
+      break
    
     default:
       response.end( '404 Error: File Not Found' )

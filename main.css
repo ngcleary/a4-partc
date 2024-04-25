@@ -106,18 +106,29 @@ input {
 form{
     padding: 10px;
     margin-left: 10px;
-    /* border: 10px solid #999;
-    border-color: black; */
+  
 }
 
-/* .error {
-	background-color: LightYellow;
-	color: DarkRed;
-	width: 160px;
-	padding: 10px;
-	border: 1px solid gray;
-	position: absolute;
-	left: 120px;
-	box-shadow: 3px 3px 3px #999999;
-	border-radius: 7px;
-} */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

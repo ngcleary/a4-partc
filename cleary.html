@@ -52,22 +52,7 @@
             "Kimberley and Peter",
             "",
           ],
-          // [
-          //   {
-          //     v: "Sarah",
-          //     f: '<button style="color:blue;"><img src="/emptyProfile.png"><br/>Sarah</button>',
-          //   },
-          //   "Nora",
-          //   "",
-          // ],
-          // [
-          //   {
-          //     v: "Joe",
-          //     f: `<button id='disabled' disabled style="color:blue;"><img src="/emptyProfile.png"><br/>Joe</button>`,
-          //   },
-          //   "Maeve",
-          //   "",
-          // ],
+         
         ]);
         var options = {
           allowHtml: true,
@@ -86,8 +71,13 @@
           document.getElementById("chart_div")
         );
         // Draw the chart, setting the allowHtml option to true for the tooltips.
-        chart.draw(data, { 'allowHtml': true });
+        chart.draw(data, {
+          'allowHtml': true,
+          'compactRows': true,
+          'size': "small"
+        });
       }
+      
 
       function noraProfile(){
         window.location.href = '/nora';
@@ -96,7 +86,7 @@
   </head>
   <body>
     <div id="header">
-      <button class="back" onclick="location.href='/home';">Back to families</button>
+      <button class="back" onclick="location.href='/home';">Back to Home</button>
       <h1>Cleary Family</h1>
     </div>
     <div id="chart_div"></div>
