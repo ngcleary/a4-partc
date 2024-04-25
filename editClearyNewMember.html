@@ -22,8 +22,8 @@
             {
               v: "Kimberley and Peter",
               f: `<div style= "display: flex;">
-      <button id='disabled' disabled style= "margin-right:10px;"><img src="/emptyProfile.png"><br/>Kimberley</button>
-      <button  id='disabled' disabled style= "margin-left:10px;"><img src="/emptyProfile.png"><br/>Peter</button></div>`,
+      <button style= "margin-right:10px;"><img src="/emptyProfile.png"><br/>Kimberley</button>
+      <button style= "margin-left:10px;"><img src="/emptyProfile.png"><br/>Peter</button></div>`,
             },
             "",
             "",
@@ -31,7 +31,7 @@
           [
             {
               v: "Madelyn",
-              f: `<button id='disabled' disabled><img src="/emptyProfile.png"><br/>Madelyn</button>`,
+              f: '<button><img src="/emptyProfile.png"><br/>Madelyn</button>',
             },
             "Kimberley and Peter",
             "",
@@ -39,7 +39,7 @@
           [
             {
               v: "Maeve",
-              f: `<button id='disabled' disabled><img src="/emptyProfile.png"><br/>Maeve</button>`,
+              f: '<button><img src="/emptyProfile.png"><br/>Maeve</button>',
             },
             "Kimberley and Peter",
             "",
@@ -47,27 +47,20 @@
           [
             {
               v: "Nora",
-              f: `<button onclick="noraProfile()"><img src="/emptyProfile.png"><br/>Nora</button>`,
+              f: `<button onclick="noraEditProfile()"><img src="/emptyProfile.png"><br/>Nora</button>`,
             },
             "Kimberley and Peter",
             "",
           ],
-          // [
-          //   {
-          //     v: "Sarah",
-          //     f: '<button style="color:blue;"><img src="/emptyProfile.png"><br/>Sarah</button>',
-          //   },
-          //   "Nora",
-          //   "",
-          // ],
-          // [
-          //   {
-          //     v: "Joe",
-          //     f: `<button id='disabled' disabled style="color:blue;"><img src="/emptyProfile.png"><br/>Joe</button>`,
-          //   },
-          //   "Maeve",
-          //   "",
-          // ],
+          [
+            {
+              v: "NEW",
+              f: `<button><br/>NEW</button>`,
+            },
+            "Kimberley and Peter",
+            "",
+          ],
+   
         ]);
         var options = {
           allowHtml: true,
@@ -89,17 +82,19 @@
         chart.draw(data, { 'allowHtml': true });
       }
 
-      function noraProfile(){
-        window.location.href = '/nora';
+      function noraEditProfile(){
+        window.location.href = '/noraEdit';
       }
     </script>
   </head>
   <body>
     <div id="header">
-      <button class="back" onclick="location.href='/home';">Back to families</button>
+      <button class="back" onclick="location.href='/editHome';">Back to families</button>
       <h1>Cleary Family</h1>
+      <h3>Select a profile to edit or add a new member</h3>
     </div>
     <div id="chart_div"></div>
     <div id="test"></div>
+    <button id="new"onclick="location.href='/newProfile';">+</button>
   </body>
 </html>

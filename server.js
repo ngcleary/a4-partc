@@ -16,11 +16,26 @@ const server = http.createServer( function( request,response ) {
     case '/bigTree':
       sendFile( response, 'bigTree.html' )
       break
+    case '/newProfile':
+      sendFile( response, 'newProfile.html' )
+      break
+    case '/editClearyNewMember':
+      sendFile( response, 'editClearyNewMember.html' )
+      break
+    case '/editHome':
+      sendFile( response, 'editHome.html' )
+      break
+    case '/editCleary':
+      sendFile( response, 'editCleary.html' )
+      break
     case '/tree.css':
       sendFile( response, 'tree.css' )
       break
     case '/main.css':
       sendFile( response, 'main.css' )
+      break
+    case '/edit.css':
+      sendFile( response, 'edit.css' )
       break
     case '/cleary':
       sendFile( response, 'cleary.html' )
@@ -30,6 +45,9 @@ const server = http.createServer( function( request,response ) {
       break
     case '/emptyProfile.png':
       sendFile( response, 'emptyProfile.png' )
+      break
+    case '/edit.png':
+      sendFile( response, 'edit.png' )
       break
    
     default:

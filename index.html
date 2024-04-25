@@ -25,11 +25,11 @@
       let person = prompt("Please enter password:", "password");
       if (person == null || person == "") {
         text = "User cancelled the prompt.";
-      } else if(person != "hello") {
+      } else if(person != "1234") {
         text = "Incorrect password.";
       }
       else{
-        window.location.href = '/nora'
+        window.location.href = '/editHome'
       }
       document.getElementById("pass").innerHTML = text;
 

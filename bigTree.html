@@ -23,24 +23,30 @@
             {
               v: "Carol and Jack",
               f: `
-      <button style="padding: 5px;"><img src="/emptyProfile.png"><br/>Carol</button>
-      <button ><img src="/emptyProfile.png"><br/>Jack</button>`,
+      <button id='disabled' disabled ><img src="/emptyProfile.png"><br/>Carol</button>
+      <button id='disabled' disabled><img src="/emptyProfile.png"><br/>Jack</button>`,
             },
             "",
             "",
           ],
           [
             {
-              v: "Amy",
-              f: '<button><img src="/emptyProfile.png"><br/>Amy</button>',
+              v: "Amy and Matt",
+              f: `<button id='disabled' disabled style= "height: 50px;""><br/>Perkins family</button><div class="cell">
+                
+      <button id='disabled'  disabled><img src="/emptyProfile.png"><br/>Amy</button>
+      <button id='disabled' disabled><img src="/emptyProfile.png"><br/>Matt</button></div>`,
             },
             "Carol and Jack",
             "",
           ],
           [
             {
-              v: "Jennifer",
-              f: '<button><img src="/emptyProfile.png"><br/>Jennifer</button>',
+              v: "Jennifer and Michael",
+              f: `<button id='disabled' disabled style= "height: 50px;"><br/>Vitelli family</button><div class="cell">
+                
+      <button id='disabled' disabled ><img src="/emptyProfile.png"><br/>Jennifer</button>
+      <button id='disabled' disabled><img src="/emptyProfile.png"><br/>Michael</button></div>`,
             },
             "Carol and Jack",
             "",
@@ -50,24 +56,17 @@
               v: "Kimberley and Peter",
               f: `<button style= "height: 50px;"onclick="window.location.href = '/cleary';"><br/>Cleary family</button><div class="cell">
                 
-      <button ><img src="/emptyProfile.png"><br/>Kimberley</button>
-      <button><img src="/emptyProfile.png"><br/>Peter</button></div>`,
+      <button id='disabled' disabled><img src="/emptyProfile.png"><br/>Kimberley</button>
+      <button id='disabled' disabled><img src="/emptyProfile.png"><br/>Peter</button></div>`,
             },
             "Carol and Jack",
             "",
           ],
-          [
-            {
-              v: "Melissa",
-              f: '<button style="color:blue;"><img src="/emptyProfile.png"><br/>Melissa</button>',
-            },
-            "Carol and Jack",
-            "",
-          ],
+         
           [
             {
               v: "Madelyn",
-              f: `<button disabled><img src="/emptyProfile.png"><br/>Madelyn</button>`,
+              f: `<button id='disabled' disabled><img src="/emptyProfile.png"><br/>Madelyn</button>`,
             },
             "Kimberley and Peter",
             "",
@@ -75,7 +74,7 @@
           [
             {
               v: "Maeve",
-              f: `<button disabled><img src="/emptyProfile.png"><br/>Maeve</button>`,
+              f: `<button id='disabled' disabled><img src="/emptyProfile.png"><br/>Maeve</button>`,
             },
             "Kimberley and Peter",
             "",
@@ -86,6 +85,22 @@
               f: `<button onclick="noraProfile()"><img src="/emptyProfile.png"><br/>Nora</button>`,
             },
             "Kimberley and Peter",
+            "",
+          ],
+          [
+            {
+              v: "Jack",
+              f: `<button id='disabled' disabled><img src="/emptyProfile.png"><br/>Jack</button>`,
+            },
+            "Amy and Matt",
+            "",
+          ],
+          [
+            {
+              v: "Sam",
+              f: `<button id='disabled' disabled><img src="/emptyProfile.png"><br/>Sam</button>`,
+            },
+            "Amy and Matt",
             "",
           ],
         ]);
@@ -115,6 +130,10 @@
 
       function noraProfile() {
         window.location.href = "/nora";
+      }
+
+      function alertFunction(){
+        alert("Under development.");
       }
     </script>
   </head>
