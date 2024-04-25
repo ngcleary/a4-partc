@@ -1,5 +1,7 @@
-CS 3041 Assignment 4 Part C: Memory Tree
+CS 3041 Assignment 4 Part C: Memory Tree 
 ===
+https://memory-tree.glitch.me/ 
+
 Memory Tree is an application intended to aid the needs of elderly individuals with memory impairments. As my grandmother’s dementia has worsened over the past year, I have become increasingly aware of various strategies and tricks used to trigger her memory, which reduce her anxiety and her reliance on others. A constant concern of hers is remembering details about her large family. As of now, she relies on other people or various Post-It notes, digital reminders, or whiteboards to remind her about her family.
 
 While this system works, she is often frustrated that she must rely on others, or is constantly worried that her paper notecard is not up to date with all of her grandchildren’s current ages, hobbies, schools, etc. 
