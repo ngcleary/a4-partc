@@ -1,4 +1,5 @@
-# a4-partc
+# CS 3041 Assignment 4 Part c
+## Memory Tree
 Depth Features
 1. User: View the profile details of ‘Nora’ through multiple paths. From the ‘Welcome’ page, the user should select ‘See my family tree’ and navigate through various trees to view details about ‘Nora’
 Path 1: Navigate directly to the Cleary tree
